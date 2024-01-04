@@ -90,7 +90,7 @@ async function run() {
         {
           $set: { ...user, timestamp: Date.now() },
         },
-        
+        options
       )
       res.send(result)
     })
