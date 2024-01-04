@@ -60,7 +60,7 @@ async function run() {
         .send({ success: true })
     })
 
-    // Logout
+    // Logout api
     app.get('/logout', async (req, res) => {
       try {
         res
@@ -90,7 +90,7 @@ async function run() {
         {
           $set: { ...user, timestamp: Date.now() },
         },
-        options
+        
       )
       res.send(result)
     })
