@@ -83,7 +83,7 @@ async function run() {
       const query = { email: email }
       const options = { upsert: true }
       const isExist = await usersCollection.findOne(query)
-      console.log('User found?----->', isExist)
+      console.log('User found?--------->', isExist)
       if (isExist) return res.send(isExist)
       const result = await usersCollection.updateOne(
         query,
